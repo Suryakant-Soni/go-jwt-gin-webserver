@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "4d623980-337c-480d-ba80-37fb7c22142a",
+		"name": "go-jwt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14494772"
+	},
+	"item": [
+		{
+			"name": "/users/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"First_name\" : \"sumit\",\n    \"Last_name\" : \"gupta\",\n    \"Password\" : \"Suryakant1234\",\n    \"Email\": \"sguptamf@gmail.com\",\n    \"Phone\": \"7720038733\",\n    \"User_type\": \"USER\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/users/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test api-get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/api-get",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api-get"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Password\" : \"Suryakant1234\",\n    \"Email\": \"sksonimf@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "all users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InNrc29uaW1mQGdtYWlsLmNvbSIsIkZpcnN0X05hbWUiOiJzdXJ5YWthbnQiLCJMYXN0X05hbWUiOiJzb25pIiwiVWlkIjoiT2JqZWN0SUQoXCI2NDVhMTJjOTBkY2RjMGI2NzI2ODliZDNcIikiLCJVc2VyX3R5cGUiOiJBRE1JTiIsImV4cCI6MTY4Mzc0MzYwMn0.7cKxJELRXq2ybZhZQHs8zEz5LufCsCq7Bl0AL1b2LKI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Password\" : \"Suryakant1234\",\n    \"Email\": \"sksonimf@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/users?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InNrc29uaW1mQGdtYWlsLmNvbSIsIkZpcnN0X05hbWUiOiJzdXJ5YWthbnQiLCJMYXN0X05hbWUiOiJzb25pIiwiVWlkIjoiT2JqZWN0SUQoXCI2NDVhMTJjOTBkY2RjMGI2NzI2ODliZDNcIikiLCJVc2VyX3R5cGUiOiJBRE1JTiIsImV4cCI6MTY4Mzc0MzYwMn0.7cKxJELRXq2ybZhZQHs8zEz5LufCsCq7Bl0AL1b2LKI",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InNrc29uaW1mQGdtYWlsLmNvbSIsIkZpcnN0X05hbWUiOiJzdXJ5YWthbnQiLCJMYXN0X05hbWUiOiJzb25pIiwiVWlkIjoiT2JqZWN0SUQoXCI2NDVhMTJjOTBkY2RjMGI2NzI2ODliZDNcIikiLCJVc2VyX3R5cGUiOiJBRE1JTiIsImV4cCI6MTY4Mzc0MzYwMn0.7cKxJELRXq2ybZhZQHs8zEz5LufCsCq7Bl0AL1b2LKI"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get single user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InNrc29uaW1mQGdtYWlsLmNvbSIsIkZpcnN0X05hbWUiOiJzdXJ5YWthbnQiLCJMYXN0X05hbWUiOiJzb25pIiwiVWlkIjoiT2JqZWN0SUQoXCI2NDVhMTJjOTBkY2RjMGI2NzI2ODliZDNcIikiLCJVc2VyX3R5cGUiOiJBRE1JTiIsImV4cCI6MTY4Mzc0MzYwMn0.7cKxJELRXq2ybZhZQHs8zEz5LufCsCq7Bl0AL1b2LKI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:9000/users/645a90670c863c88de06db00",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"users",
+						"645a90670c863c88de06db00"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,15 @@
+db.user.find()
+show collections
+use mymongo
+show dbs
+exit
+ecit
+show dbs
+exit
+mongosh
+mongodh
+cd ..
+cd ../
+dir
+tree
+ls
